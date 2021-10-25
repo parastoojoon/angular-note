@@ -1,0 +1,21 @@
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+
+  <div>
+    <label for="title">
+      Title
+    </label>
+    <input id="title" type="text" formControlName="title">
+  </div>
+
+  <div>
+    <label for="note">
+      Note
+    </label>
+    <input style="height:50px; margin-top: 30px" id="note" type="text" formControlName="note">
+  </div>
+
+  <button style="margin-top:50px;" class="button" type="submit">Add</button>
+  <button style="margin-top:50px;" class="button" (click)="cancel()">Cancel</button>
+
+</form>

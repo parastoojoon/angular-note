@@ -1,0 +1,16 @@
+<div *ngFor="let note of notes;let i=index" #container class="note-card-container">
+  <div>
+    <h1 class="note-card-title">{{note.title}}</h1>
+
+    <div class="note-card-body">{{note.note}}</div>
+
+  </div>
+
+  <div>
+    <button style="margin: 15px;" class="close" mat-button (click)="remove(note.id)">Delete</button>
+  </div>
+  <div></div>
+</div>
+<div>
+  <button style="margin: 60px" class="close" mat-button (click)="navigateToPage('/add-note')">Add Note</button>
+</div>
